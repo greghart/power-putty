@@ -1,0 +1,19 @@
+{
+  "name": "power-putty",
+  "version": "1.0.0",
+  "description": "A collection of powerful components to help you stick together web applications easily",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "^3.14.1"
+  },
+  "dependencies": {
+    "@types/node": "^12.0.2",
+    "power-putty-test": "file:packages/power-putty-test",
+    "typescript": "^3.4.5"
+  }
+}

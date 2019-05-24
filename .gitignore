@@ -1,0 +1,5 @@
+# Dev files
+**/node_modules
+**/.vscode
+# TS builds
+packages/*/lib
