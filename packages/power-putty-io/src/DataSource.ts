@@ -7,13 +7,10 @@ import Source from './Source';
  */
 class DataSource implements Source {
 
-  name: string;
-  data: Buffer | string;
-
-  constructor(name, data) {
-    this.name = name;
-    this.data = data;
-  }
+  constructor(
+    private name: string, 
+    private data: Buffer | string
+  ) {}
 
   getOriginalName() {
     return this.name;
