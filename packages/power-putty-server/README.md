@@ -45,3 +45,6 @@ standardized settings like `port`.
 | `power-putty-server.sessions.secret` | Secret token for sessions |
 | `power-putty-server.sessions.redis.host` | Host of Redis server |
 | `power-putty-server.sessions.redis.port` | Port of Redis server |
+| `power-putty-server.serving` | File serving related config. Don't supply values to handle yourself |
+| `power-putty-server.serving.favicon` | Absolute path to favicon |
+| `power-putty-server.serving.static` | Absolute path to static folder. Serves at `/static` |

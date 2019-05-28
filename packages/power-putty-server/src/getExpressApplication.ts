@@ -37,6 +37,10 @@ interface Options {
       port: number;
     };
   };
+  serving: {
+    favicon: string;
+    static: string;
+  }
 }
 
 // Safely get a config, return undefined if it's not set
@@ -62,6 +66,10 @@ function getExpressApplication(_app?: express.Express, _options?: Partial<Option
         port: safeGet<number>('power-putty-server.sessions.redis.port')
       },
     },
+    serving: {
+      favicon: safeGet<string>('power-putty-server.serving.favicon'),
+      static: safeGet<string>('power-putty-server.serving.static')
+    },
     ..._options,
   }
   // TODO options validation step?
@@ -72,11 +80,11 @@ function getExpressApplication(_app?: express.Express, _options?: Partial<Option
   app.set('trust proxy', 1);
   app.set('port', options.port);
   // Server favicon
-  app.use(
-    favicon(
-      path.join(__dirname, '../../../static/ico/favicon.ico'),
-    ),
-  );
+  if (options.serving.favicon) {
+    app.use(
+      favicon(options.serving.favicon)
+    );
+  }
   // Security headers can make things annoying during local dev
   if (!options.isLocal) {
     app.use(helmet());
@@ -89,12 +97,15 @@ function getExpressApplication(_app?: express.Express, _options?: Partial<Option
   }));
   app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
   // Static files
-  app.use('/build', serveStatic(
-    path.join(__dirname, '../../../build'),
-  ));
-  app.use('/static', serveStatic(
-    path.join(__dirname, '../../../static'),
-  ));
+  if (options.serving.static) {
+    app.use(
+      '/static', 
+      serveStatic(options.serving.static)
+    );
+  }
+  // app.use('/static', serveStatic(
+  //   path.join(__dirname, '../../../static'),
+  // ));
 
   // Setup cookies and sessions
   app.use(
@@ -119,8 +130,8 @@ function getExpressApplication(_app?: express.Express, _options?: Partial<Option
     if (options.isLocal) {
       res.header('Access-Control-Allow-Origin', '*');
       res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-      next();
-    }
+    } 
+    next();
   });
 
   // IO Engine
