@@ -1,12 +1,11 @@
 {
-  "name": "power-putty-test",
+  "name": "power-putty-server",
   "version": "1.0.0",
-  "description": "Power Putty Testing Layer",
+  "description": "Power Putty Express Server Layer",
   "keywords": [
     "power-putty",
-    "test",
-    "mocha",
-    "chai"
+    "express",
+    "server"
   ],
   "author": "Greg Hart <greghartemail@gmail.com>",
   "homepage": "https://github.com/greghart/power-putty#readme",
@@ -20,31 +19,15 @@
   "files": [
     "lib"
   ],
-  "bin": {
-    "mocha": "./node_modules/.bin/mocha"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/greghart/power-putty.git"
   },
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/greghart/power-putty/issues"
-  },
-  "dependencies": {
-    "@types/mocha": "^5.2.6",
-    "chai": "^4.2.0",
-    "chai-as-promised": "^7.1.1",
-    "mocha": "5.x",
-    "ts-node": "^8.1.0",
-    "typescript": "^3.4.5"
-  },
-  "devDependencies": {
-    "@types/chai-as-promised": "^7.1.0",
-    "@types/node": "^12.0.2",
-    "typescript": "^3.4.5"
   }
 }

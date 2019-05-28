@@ -2,14 +2,34 @@
   "name": "power-putty-io",
   "version": "1.0.0",
   "description": "Power Putty I/O Abstraction Layer",
+  "keywords": [
+    "power-putty",
+    "i/o",
+    "files"
+  ],
   "author": "Greg Hart <greghartemail@gmail.com>",
+  "homepage": "https://github.com/greghart/power-putty#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greghart/power-putty.git"
+  },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "test": "mocha ./test/**/*.ts"
+  },
+  "bugs": {
+    "url": "https://github.com/greghart/power-putty/issues"
   },
   "dependencies": {
     "@types/express": "^4.16.1",
