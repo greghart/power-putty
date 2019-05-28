@@ -18,6 +18,7 @@
     "config": "^3.1.0",
     "mime": "^2.4.3",
     "multer": "^1.4.1",
-    "power-putty-test": "^1.0.0"
+    "power-putty-test": "file:../power-putty-test",
+    "typescript": "^3.4.5"
   }
 }
