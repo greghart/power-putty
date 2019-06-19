@@ -1,7 +1,4 @@
-import * as fs from 'fs';
 import Bluebird from 'bluebird';
-// Multer declares global types on Express
-import * as Multer from 'multer';
 
 import Source from './Source';
 

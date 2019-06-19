@@ -1,6 +1,6 @@
-import * as mime from 'mime';
-import * as AWS from 'aws-sdk';
-import * as path from 'path';
+import mime from 'mime';
+import AWS from 'aws-sdk';
+import path from 'path';
 import IOEngine from './IOEngine';
 import Upload from './Upload';
 import Source from './Source';
