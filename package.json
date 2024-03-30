@@ -6,7 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "engines": {
+    "node": ">=20"
+  },
+  "author": {
+    "email": "greghartemail@gmail.com",
+    "name": "Greg Hart"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/chai-as-promised": "^7.1.0",
@@ -18,9 +24,9 @@
     "typescript": "^3.4.5"
   },
   "dependencies": {
-    "power-putty-io": "file:packages/power-putty-io",
-    "power-putty-server": "file:packages/power-putty-server",
-    "power-putty-test": "file:packages/power-putty-test"
+    "power-putty-io": "workspace:power-putty-io",
+    "power-putty-server": "workspace:power-putty-server",
+    "power-putty-test": "workspace:power-putty-test"
   },
   "config": {
     "commitizen": {
