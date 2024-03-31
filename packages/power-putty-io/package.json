@@ -27,7 +27,7 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "test": "mocha ./test/**/*.ts"
+    "test": "cross-env TSX_TSCONFIG_PATH=\"../../tsconfig.test.json\" mocha --require tsx/cjs ./src/**/*.spec.ts"
   },
   "bugs": {
     "url": "https://github.com/greghart/power-putty/issues"

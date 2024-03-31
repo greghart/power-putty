@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+      /* Mocha is a CJS module that is ran directly, so we need to use tsx with these settings to support both during transpilation */
+      "module": "commonjs",
+      "target": "es6",
+      "esModuleInterop": true,
+  },
+  "include": ["**/*.spec.ts"]
+}

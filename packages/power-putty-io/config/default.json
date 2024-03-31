@@ -1,0 +1,8 @@
+{
+  "power-putty-io": {
+    "engine": "local",
+    "local": {
+      "rootDirectory": "./tmp"
+    }
+  }
+}
