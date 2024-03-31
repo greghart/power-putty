@@ -1,5 +1,4 @@
-export default class Upload {
-
+interface Upload {
   id: number;
   // A key to where the upload is stored
   key: string;
@@ -15,5 +14,6 @@ export default class Upload {
   sha1Hash: string;
   // Timestamp of upload
   uploadedAt: Date;
-
 }
+
+export type { Upload };

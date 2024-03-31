@@ -1,5 +1,5 @@
-import Upload from "./Upload";
-import Source from "./Source";
+import type { Upload } from "./Upload.js";
+import Source from "./Source.js";
 import { Readable } from "stream";
 
 /**
@@ -17,4 +17,4 @@ interface IOEngine {
   getCode(): string;
 }
 
-export default IOEngine;
+export type { IOEngine };

@@ -1,19 +1,14 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "node16",
+    "target": "es2020",
+    "strict": true,
+    "verbatimModuleSyntax": true,
     "declaration": true,
-    "noImplicitAny": true,
-    "removeComments": true,
-    "noLib": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "target": "es6",
     "sourceMap": true,
-    "lib": [
-      "es6"
-    ]
+    "declarationMap": true,
+    "noImplicitAny": true,
+    "strictPropertyInitialization": true,
   },
   "exclude": [
     "node_modules",

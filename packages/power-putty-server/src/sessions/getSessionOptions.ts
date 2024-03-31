@@ -1,11 +1,11 @@
-import session from 'express-session';
-import config from 'config';
-import connectRedis from 'connect-redis';
+import session from "express-session";
+import config from "config";
+import connectRedis from "connect-redis";
 const RedisStore = connectRedis(session);
 
-import getCookieOptions from './getCookieOptions';
-import { appKeyPrefix } from './getKeyPrefix';
-import isLocal from '../util/isLocal';
+import getCookieOptions from "./getCookieOptions.js";
+import { appKeyPrefix } from "./getKeyPrefix.js";
+import isLocal from "../util/isLocal.js";
 
 /**
  * Get the options to use for sessions in app
@@ -20,7 +20,7 @@ function getSessionOptions(
   isLocal: boolean,
   sessionSecret: string,
   redisHost: string,
-  redisPort: number,
+  redisPort: number
 ) {
   return {
     name: appKeyPrefix,
@@ -43,9 +43,9 @@ function getSessionOptions(
 
 const appSessionOptions = getSessionOptions(
   isLocal(),
-  config.get<string>('power-putty-server.cookies.secret'),
-  config.get<string>('power-putty-server.sessions.redis.host'),
-  config.get<number>('power-putty-server.sessions.redis.port'),
+  config.get<string>("power-putty-server.cookies.secret"),
+  config.get<string>("power-putty-server.sessions.redis.host"),
+  config.get<number>("power-putty-server.sessions.redis.port")
 );
 
 export { appSessionOptions };

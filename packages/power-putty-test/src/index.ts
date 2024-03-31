@@ -1,3 +1,3 @@
-export { default as expect } from './expect';
-import * as mocha from 'mocha';
+export { default as expect } from "./expect.js";
+import * as mocha from "mocha";
 export { mocha };

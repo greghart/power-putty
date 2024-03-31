@@ -2,6 +2,7 @@
   "name": "power-putty",
   "version": "1.0.0",
   "description": "A collection of powerful components to help you stick together web applications easily",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,7 +20,7 @@
     "@types/node": "^12.0.2",
     "commitizen": "^3.1.1",
     "cz-conventional-changelog": "^2.1.0",
-    "ts-node": "^8.1.0",
+    "tsx": "^4.7.1",
     "typescript": "^3.4.5"
   },
   "dependencies": {

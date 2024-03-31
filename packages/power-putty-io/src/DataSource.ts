@@ -1,4 +1,4 @@
-import Source from "./Source";
+import Source from "./Source.js";
 
 /**
  * A source of data where we already have a buffer

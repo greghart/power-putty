@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
-import IOEngine from "./IOEngine";
-import Upload from "./Upload";
-import Source from "./Source";
+import { type IOEngine } from "./IOEngine.js";
+import { type Upload } from "./Upload.js";
+import Source from "./Source.js";
 
 /**
  * I/O Engine to store things to local disk storage
