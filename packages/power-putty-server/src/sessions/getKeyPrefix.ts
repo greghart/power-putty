@@ -1,4 +1,4 @@
-import config from 'config';
+import config from "config";
 
 /**
  * Get the Redis session prefix for current environment
@@ -7,12 +7,12 @@ import config from 'config';
  * @memberof util/sessions
  */
 function getKeyPrefix(prefix: string) {
-  return prefix.replace(/\{NODE_ENV\}/g, process.env.NODE_ENV);
+  return prefix.replace(/\{NODE_ENV\}/g, process.env.NODE_ENV || "development");
 }
 
 // Also export current app prefix
 const appKeyPrefix = getKeyPrefix(
-  config.get<string>('power-putty-server.sessions.prefix')
+  config.get<string>("power-putty-server.sessions.prefix")
 );
 
 export default getKeyPrefix;

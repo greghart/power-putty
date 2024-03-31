@@ -2,25 +2,31 @@
   "name": "power-putty",
   "version": "1.0.0",
   "description": "A collection of powerful components to help you stick together web applications easily",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "engines": {
+    "node": ">=20"
+  },
+  "author": {
+    "email": "greghartemail@gmail.com",
+    "name": "Greg Hart"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/chai-as-promised": "^7.1.0",
     "@types/node": "^12.0.2",
     "commitizen": "^3.1.1",
     "cz-conventional-changelog": "^2.1.0",
-    "lerna": "^3.14.1",
-    "ts-node": "^8.1.0",
+    "tsx": "^4.7.1",
     "typescript": "^3.4.5"
   },
   "dependencies": {
-    "power-putty-io": "file:packages/power-putty-io",
-    "power-putty-server": "file:packages/power-putty-server",
-    "power-putty-test": "file:packages/power-putty-test"
+    "power-putty-io": "workspace:power-putty-io",
+    "power-putty-server": "workspace:power-putty-server",
+    "power-putty-test": "workspace:power-putty-test"
   },
   "config": {
     "commitizen": {
