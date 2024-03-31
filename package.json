@@ -19,7 +19,6 @@
     "@types/node": "^12.0.2",
     "commitizen": "^3.1.1",
     "cz-conventional-changelog": "^2.1.0",
-    "lerna": "^3.14.1",
     "ts-node": "^8.1.0",
     "typescript": "^3.4.5"
   },
