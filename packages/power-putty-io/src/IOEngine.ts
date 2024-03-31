@@ -1,7 +1,6 @@
-import Bluebird from 'bluebird';
-import Upload from './Upload';
-import Source from './Source';
-import { Readable } from 'stream';
+import Upload from "./Upload";
+import Source from "./Source";
+import { Readable } from "stream";
 
 /**
  * An abstract I/O Engine.
@@ -9,15 +8,13 @@ import { Readable } from 'stream';
  * Implementations dictate how to store an Upload and subsequently read an upload
  */
 interface IOEngine {
-
   // Upload data and return the data uploaded
-  upload(upload: Upload, source: Source): Bluebird.Thenable<Buffer>;
-  download(upload: Upload): Bluebird.Thenable<Buffer>;
+  upload(upload: Upload, source: Source): Promise<Buffer>;
+  download(upload: Upload): Promise<Buffer>;
   downloadStream(upload: Upload): Readable;
   // Code that identifies the engine used.
   // This is stored in database for posterity.
   getCode(): string;
-
 }
 
 export default IOEngine;
