@@ -27,7 +27,8 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "test": "cross-env TSX_TSCONFIG_PATH=\"../../tsconfig.test.json\" mocha --require tsx/cjs ./src/**/*.spec.ts"
+    "test": "cross-env TSX_TSCONFIG_PATH=\"../../tsconfig.test.json\" mocha --require tsx/cjs ./src/**/*.spec.ts",
+    "prepublish": "pnpm build"
   },
   "bugs": {
     "url": "https://github.com/greghart/power-putty/issues"
@@ -41,7 +42,7 @@
     "config": "^3.1.0",
     "mime": "^2.4.3",
     "multer": "1.4.4-lts.1",
-    "power-putty-test": "workspace:power-putty-test",
+    "power-putty-test": "workspace:*",
     "typescript": "5.4.3"
   }
 }

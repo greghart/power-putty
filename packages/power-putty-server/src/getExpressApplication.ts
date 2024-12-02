@@ -5,13 +5,12 @@ import express from "express";
 import session from "express-session";
 import favicon from "serve-favicon";
 import helmet from "helmet";
-const state = require("express-state");
+import state from "express-state";
 import bodyParser from "body-parser";
 import serveStatic from "serve-static";
 import cookieParser from "cookie-parser";
 import connectFlash from "connect-flash";
 import cors from "cors";
-import * as path from "path";
 import config from "config";
 
 import isLocal from "./util/isLocal.js";
