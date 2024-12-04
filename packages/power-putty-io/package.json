@@ -1,5 +1,5 @@
 {
-  "name": "@greghart/power-putty-io",
+  "name": "power-putty-io",
   "version": "1.0.0",
   "description": "Power Putty I/O Abstraction Layer",
   "keywords": [
