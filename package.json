@@ -4,8 +4,7 @@
   "description": "A collection of powerful components to help you stick together web applications easily",
   "type": "module",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "engines": {
     "node": ">=20"
   },
@@ -17,18 +16,17 @@
   "devDependencies": {
     "@types/chai-as-promised": "^7.1.0",
     "@types/node": "^12.0.2",
-    "commitizen": "^3.1.1",
+    "commitizen": "^4.3.1",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^2.1.0",
-    "mocha": "5.x",
     "tsx": "^4.7.1",
     "typescript": "^3.4.5"
-  },
-  "dependencies": {
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
   }
 }

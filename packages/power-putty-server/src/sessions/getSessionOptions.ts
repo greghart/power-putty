@@ -1,11 +1,10 @@
-import session from "express-session";
 import config from "config";
-import connectRedis from "connect-redis";
-const RedisStore = connectRedis(session);
+import { RedisStore } from "connect-redis";
+import redis from "redis";
 
+import isLocal from "../util/isLocal.js";
 import getCookieOptions from "./getCookieOptions.js";
 import { appKeyPrefix } from "./getKeyPrefix.js";
-import isLocal from "../util/isLocal.js";
 
 /**
  * Get the options to use for sessions in app
@@ -22,6 +21,12 @@ function getSessionOptions(
   redisHost: string,
   redisPort: number
 ) {
+  const client = redis.createClient({
+    url: `redis::/${redisHost}:${redisPort}`,
+    database: 1,
+  });
+  client.unref();
+  client.on("error", console.log);
   return {
     name: appKeyPrefix,
     secret: sessionSecret,
@@ -33,8 +38,7 @@ function getSessionOptions(
       browserSession: true,
     }),
     store: new RedisStore({
-      host: redisHost,
-      port: redisPort,
+      client: client,
       ttl: 60 * 60 * 24 * 30, // Browser sessions are maintained for 30 days
       prefix: `${appKeyPrefix}|`,
     }),
