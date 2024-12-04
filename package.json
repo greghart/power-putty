@@ -1,9 +1,7 @@
 {
   "name": "power-putty",
-  "version": "1.0.0",
   "description": "A collection of powerful components to help you stick together web applications easily",
   "type": "module",
-  "main": "index.js",
   "scripts": {},
   "engines": {
     "node": ">=20"
