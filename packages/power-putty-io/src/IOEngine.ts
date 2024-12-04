@@ -1,6 +1,6 @@
-import type { Upload } from "./Upload.js";
-import Source from "./Source.js";
 import { Readable } from "stream";
+import Source from "./Source.js";
+import type { Upload } from "./Upload.js";
 
 /**
  * An abstract I/O Engine.

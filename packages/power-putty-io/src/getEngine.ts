@@ -3,16 +3,14 @@ import { type IOEngine } from "./IOEngine.js";
 import LocalEngine from "./LocalEngine.js";
 import S3Engine from "./S3Engine.js";
 
-function getEngine(
-  engine = config.get<string>("power-putty-io.engine")
-): IOEngine {
-  if (engine === "local") {
-    return new LocalEngine(config.get("power-putty-io.local.rootDirectory"));
+function getEngine(options = config.get<any>("power-putty-io")): IOEngine {
+  if (options.engine === "local") {
+    return new LocalEngine(options.local.rootDirectory);
   }
-  if (engine === "s3") {
-    return new S3Engine(config.get("power-putty-io.s3.bucket"));
+  if (options.engine === "s3") {
+    return new S3Engine(options.s3.bucket);
   }
-  throw new Error(`getEngine -- Engine ${engine} unknown`);
+  throw new Error(`getEngine -- Engine ${options.engine} unknown`);
 }
 
 export default getEngine;
