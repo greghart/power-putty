@@ -25,9 +25,6 @@
     "typescript": "^3.4.5"
   },
   "dependencies": {
-    "power-putty-io": "workspace:power-putty-io",
-    "power-putty-server": "workspace:power-putty-server",
-    "power-putty-test": "workspace:power-putty-test"
   },
   "config": {
     "commitizen": {
